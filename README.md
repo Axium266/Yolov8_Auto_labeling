@@ -3,4 +3,4 @@ For yolov8 labeling
 
 先使用trans3.py 再使用fix.py做修正
 
-complax.py 為複數模型標註
+complex.py 為複數模型標註
