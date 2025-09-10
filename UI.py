@@ -56,7 +56,7 @@ def run():
         return
 
     try:
-        optain.run(weights, input_folder, output_folder, threshold_settings, few_max, med_max)
+        optain.run_auto_annotation(weights, input_folder, output_folder, threshold_settings, few_max, med_max)
         messagebox.showinfo("完成", "所有圖片標註完成！")
     except Exception as ex:
         messagebox.showerror("錯誤", f"標註失敗: {ex}")
@@ -133,5 +133,6 @@ for i, cat in enumerate(categories):
     tk.Entry(table_frame, textvariable=iou_vars[i], width=8, justify="center").grid(row=i+1, column=3)
 
 tk.Button(root, text="開始標註", width=25, command=run).grid(row=7 + len(categories), column=1, pady=30)
+
 
 root.mainloop()
