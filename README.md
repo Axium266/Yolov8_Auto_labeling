@@ -1,2 +1,1 @@
-# AI-labels
-For yolov8 labeling
+# Yolov8 自動標註 (Auto labeling)
