@@ -1,5 +1,5 @@
 # Yolov8 自動標註 (Auto labeling)
-此專案適用於 ultralytics 模型的自動標註
+此專案僅適用於 ultralytics 模型的自動標註
 
 ## 1. 自動標註使用介紹
 ### optain.py
