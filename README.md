@@ -29,7 +29,7 @@ python UI.py
 
 導入後 檔案如下
 <p align="left">
-  <img src="Readme/2.png" width="500"/>
+  <img src="Readme/2.png" width="800"/>
 </p>
 
 ### CBAM / ECA 資料夾
