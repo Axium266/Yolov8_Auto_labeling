@@ -38,3 +38,11 @@ python UI.py
 將對應資料夾中的檔案上傳至Colab
 
 並照著工作流替換檔案即可加裝
+
+以 ECA 為例
+<p align="left">
+  <img src="Readme/3.png" width="800"/>
+</p>
+將 ECA 資料夾中的檔案上傳後
+
+照著工作流中的流程 由上往下執行 即可成功安裝
