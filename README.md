@@ -12,3 +12,12 @@
 ```
 python UI.py
 ```
+啟動後如下圖
+<p align="left">
+  <img src="Readme/1.png" width="500"/>
+</p>
+可自定義 Conf, NMS, IoU 等參數
+
+並可根據圖片中的標籤數量 使用對應的參數標註
+
+
