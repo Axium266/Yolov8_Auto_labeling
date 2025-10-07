@@ -20,4 +20,17 @@ python UI.py
 
 並可根據圖片中的標籤數量 使用對應的參數標註
 
+## 2. Google Colab 訓練工作流介紹
 
+### yolov8 v1.3.ipynb
+為 Yolov8 的 Google Colab 工作流檔案
+
+將其導入 Colab 中即可使用
+
+導入後 檔案如下
+<p align="left">
+  <img src="Readme/2.png" width="500"/>
+</p>
+
+### CBAM / ECA 資料夾
+可選用添加的注意力機制
