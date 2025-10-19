@@ -108,14 +108,12 @@ tk.Entry(root, textvariable=few_max_var, width=8).grid(row=3, column=1, sticky="
 tk.Label(root, text="medium最大標註數量 (含)：").grid(row=4, column=0, sticky="e", pady=10, padx=5)
 tk.Entry(root, textvariable=med_max_var, width=8).grid(row=4, column=1, sticky="w")
 
-# 隔線
 separator = ttk.Separator(root, orient='horizontal')
 separator.grid(row=5, column=0, columnspan=3, sticky="ew", pady=(15,10))
 
 # 模擬表格放入frame讓各欄寬自適應
 table_frame = tk.Frame(root)
 table_frame.grid(row=6, column=0, columnspan=3, sticky="w", padx=10)
-
 tk.Label(table_frame, text=" ").grid(row=0, column=0)
 tk.Label(table_frame, text="CONF").grid(row=0, column=1)
 tk.Label(table_frame, text="NMS").grid(row=0, column=2)
@@ -136,3 +134,4 @@ tk.Button(root, text="開始標註", width=25, command=run).grid(row=7 + len(cat
 
 
 root.mainloop()
+
