@@ -31,7 +31,7 @@ def run_auto_annotation(weight_path, image_folder, output_folder, threshold_sett
         if not image_name.lower().endswith((".jpg", ".png", ".jpeg")):
             continue
         image_path = os.path.join(image_folder, image_name)
-        # 第一次推論（固定初判參數）
+        # 第一次推論
         initial_results = model(image_path, conf=0.5, iou=0.4)
         # 統計初步偵測數
         label_count = sum(len(result.boxes) for result in initial_results)
@@ -63,7 +63,7 @@ def run_auto_annotation(weight_path, image_folder, output_folder, threshold_sett
                 x_min, y_min = x_center - width / 2, y_center - height / 2
                 x_max, y_max = x_center + width / 2, y_center + height / 2
                 annotations.append((cls, conf, x_min, y_min, x_max, y_max, x_center, y_center, width, height))
-            # 消除重複標註（nms，依iou_thres）
+            # 消除重複標註
             annotations = sorted(annotations, key=lambda x: x[1], reverse=True)
             final_annotations = []
             temp_anns = list(annotations)
@@ -76,4 +76,5 @@ def run_auto_annotation(weight_path, image_folder, output_folder, threshold_sett
                 for ann in final_annotations:
                     f.write(f"{ann[0]} {ann[6]} {ann[7]} {ann[8]} {ann[9]}\n")
         print(f"標註完成: {image_name} -> {txt_filename}（類別: {category}）")
+
     print("所有圖片標註完成！")
